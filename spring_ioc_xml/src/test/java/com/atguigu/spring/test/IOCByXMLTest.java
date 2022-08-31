@@ -41,12 +41,22 @@ public class IOCByXMLTest {
     @Test
     public void testIOC(){
         //获取IOC容器
-        //ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("spring-ioc.xml");
+        ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("spring-ioc.xml");
         //获取bean
+        // 第一种方式: 根据id进行获取
         //Student studentOne = (Student) ioc.getBean("studentOne");
+        //System.out.println(studentOne);
+
+        // 第二种方式: 根据类型获取
         //Student studentTwo = ioc.getBean(Student.class);
-        //Student studentThree = ioc.getBean("studentOne", Student.class);
-        //System.out.println(studentThree);
         //System.out.println(studentTwo);
+
+        // 第三种方式: 根据id和类型进行获取
+        Student studentThree = ioc.getBean("studentThree", Student.class);
+        System.out.println(studentThree);
+
+        // 如果组件类是心啊了接口，可以根据接口获取bean
+        Student studentFour = (Student)ioc.getBean("studentFour", Person.class);
+        System.out.println(studentFour);
     }
 }
