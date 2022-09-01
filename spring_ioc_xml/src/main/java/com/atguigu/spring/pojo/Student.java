@@ -3,7 +3,7 @@ package com.atguigu.spring.pojo;
 import java.util.Arrays;
 import java.util.Map;
 
-public class Student implements Person{
+public class Student implements Person {
     private Integer sid;
     private String sname;
     private Integer age;
@@ -13,29 +13,27 @@ public class Student implements Person{
 
     private String[] hobby;
 
-    private Map<String,Teacher>  teacherMap;
+    private Map<String, Teacher> teacherMap;
     private Clazz clazz;
-
 
 
     public Student() {
         //System.out.println("午餐够造");
     }
 
-    public Student(Integer sid, String sname,  String gender, Integer age) {
+    public Student(Integer sid, String sname, String gender, Integer age) {
         this.sid = sid;
         this.sname = sname;
         this.age = age;
         this.gender = gender;
     }
 
-    public Student(Integer sid, String sname,  String gender, Double score) {
+    public Student(Integer sid, String sname, String gender, Double score) {
         this.sid = sid;
         this.sname = sname;
         this.gender = gender;
         this.score = score;
     }
-
 
 
     public Integer getSid() {
@@ -117,3 +115,7 @@ public class Student implements Person{
     }
 
 }
+
+
+
+
