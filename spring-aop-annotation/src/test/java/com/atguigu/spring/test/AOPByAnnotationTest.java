@@ -13,6 +13,6 @@ public class AOPByAnnotationTest {
         //CalculatorImpl calculator = ioc.getBean(CalculatorImpl.class);
         //calculator.add(1,1);
         Calculator calculator = ioc.getBean(Calculator.class);
-        calculator.div(10,2);
+        calculator.add(10,2);
     }
 }

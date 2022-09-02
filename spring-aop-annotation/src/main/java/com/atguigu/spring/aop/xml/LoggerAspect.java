@@ -12,7 +12,6 @@ import java.util.Arrays;
 @Component
 public class LoggerAspect {
 
-
     public void beforeAdviceMethod(JoinPoint joinPoint) {
         // 获取连接点所对应的方法的签名信息
         Signature signature = joinPoint.getSignature();
