@@ -16,10 +16,13 @@
   <servlet>
     <servlet-name>SpringMVC</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!--这个标签使用来设置spring的配置文件的路径的-->
     <init-param>
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:springmvc.xml</param-value>
     </init-param>
+    <!--将DispatcherServlet的启动时间提前到服务器启动的时候-->
+    <load-on-startup>1</load-on-startup>
   </servlet>
 
   <servlet-mapping>
