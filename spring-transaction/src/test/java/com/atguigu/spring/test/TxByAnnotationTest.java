@@ -27,7 +27,7 @@ public class TxByAnnotationTest {
 
     @Test
     public void testBuyBook(){
-        //bookController.butBook(1, 1);
-        bookController.checkout(1, new Integer[]{1,2});
+        bookController.butBook(1, 1);
+        //bookController.checkout(1, new Integer[]{1,2});
     }
 }

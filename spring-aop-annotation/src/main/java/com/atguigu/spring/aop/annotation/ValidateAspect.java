@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-@Order(1)
 public class ValidateAspect {
     //@Before("execution(* com.atguigu.spring.aop.annotation.CalculatorImpl.*(..))")
     @Before("com.atguigu.spring.aop.annotation.LoggerAspect.pointCut()")

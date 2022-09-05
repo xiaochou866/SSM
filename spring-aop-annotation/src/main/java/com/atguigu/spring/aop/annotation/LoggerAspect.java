@@ -46,9 +46,10 @@ public class LoggerAspect {
     }
 
     //@Before("execution(public int com.atguigu.spring.aop.annotation.CalculatorImpl.add(int, int))")
-    //public void beforeAdviceMethod(JoinPoint joinPoint){
+    //public void beforeAdviceMethod(){
     //    System.out.println("loggerAspect,前置通知");
     //}
+
 
     //@Before("execution(public int com.atguigu.spring.aop.annotation.CalculatorImpl.add(int, int))")
     @Before("pointCut()")
@@ -59,8 +60,8 @@ public class LoggerAspect {
         Object[] args = joinPoint.getArgs();
         System.out.println("LoggerAspect,方法:" + signature.getName() + ",参数:" + Arrays.toString(args));
     }
-
-
+    //
+    //
     //@After("pointCut()")
     //public void afterAdviceMethod(JoinPoint joinPoint){
     //    // 获取连接点所对应方法的签名信息
@@ -88,7 +89,7 @@ public class LoggerAspect {
     //    System.out.println("LoggerAspect,方法:"+signature.getName()+", 异常通知"+ex);
     //
     //}
-    //
+
     //@Around("pointCut()")
     ////环绕通知的方法一定要和目标对象方法的返回值一致
     //public Object aroundAdviceMethod(ProceedingJoinPoint joinPoint){

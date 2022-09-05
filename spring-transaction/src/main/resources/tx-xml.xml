@@ -37,7 +37,9 @@
 
     <!--配置事务通知-->
     <tx:advice id="tx" transaction-manager="transactionManager">
-
+        <tx:attributes>
+            <tx:method name="buybook" read-only="true"/>
+        </tx:attributes>
     </tx:advice>
 
     <aop:config>
