@@ -4,6 +4,7 @@ import com.atguigu.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -16,7 +17,7 @@ import java.util.Map;
 * a>导入jackson的依赖
 * b>我们需要在springMVC的配置文件中设置 开启MVC的注解驱动
 * C>处理请求的控制器方法的形参位置，直接设置json格式的请求参数要转换的java类型的形参，再使用@RequestBody标识即可
-*
+*3.@ResponseBody: 将所标识的控制器方法的返回值作为响应报文的响应体相应到浏览器
 * */
 @Controller
 public class TestAjaxController {
@@ -38,5 +39,11 @@ public class TestAjaxController {
     public void testRequestBody(@RequestBody User user, HttpServletResponse response) throws IOException {
         System.out.println(user);
         response.getWriter().write("hello, RequestBody");
+    }
+
+    @RequestMapping("/test/ResponseBody")
+    @ResponseBody
+    public String testResponseBody(){
+        return "success";
     }
 }
