@@ -23,11 +23,13 @@ public class EmployeeDao {
     private static Integer initId = 1006;
 
     public void save(Employee employee) {
+        //  如果是新添加的雇员信息 则将id的值赋值为initId 之后再将initId进行自增
+        // 走if判断语句 就是新增雇员
+        // 不走if判断语句 就是更新雇员信息
         if (employee.getId() == null) {
             employee.setId(initId++);
         }
         employees.put(employee.getId(), employee);
-
     }
 
     public Collection<Employee> getAll() {
